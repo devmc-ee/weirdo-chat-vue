@@ -15,10 +15,13 @@ const { VITE_MAX_MESSAGES_IN_POOL } = import.meta.env
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
     <div class="page-content">
-      <p>It is a "weirdo" chat simulation. If a conversation is initiated with a polite (single) greeting in English,
-        Estonian,
-        or Russian, the system will try to respond correspondingly.</p>
-      <p>Otherwise, it will respond by modifying your message using one of the following methods:</p>
+      <p>
+        It is a "weirdo" chat simulation. If a conversation is initiated with a polite (single)
+        greeting in English, Estonian, or Russian, the system will try to respond correspondingly.
+      </p>
+      <p>
+        Otherwise, it will respond by modifying your message using one of the following methods:
+      </p>
       <ul>
         <li>Reversing the entire sentence.</li>
         <li>Reversing the letters within each word (while preserving the original word order).</li>
@@ -55,7 +58,6 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-
   .greetings h1,
   .greetings h3 {
     text-align: left;

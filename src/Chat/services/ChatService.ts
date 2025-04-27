@@ -14,7 +14,7 @@ class ChatService {
   constructor(
     public responseDictionary: Record<string, string>,
     public storageService: StorageService,
-  ) {}
+  ) { }
 
   handleSubmit(message: string, messages: Message[], typing: Ref<boolean, boolean>) {
     if (!message) return
@@ -28,13 +28,18 @@ class ChatService {
       }),
     )
 
-    typing.value = true
-
     const isFirstContact = messages.length === 1
     const response = this.getResponse(message, isFirstContact)
 
-    // imitation of the typing process
-    const RANDOM_TIMEOUT = Math.floor(Math.random() * +VITE_MAX_RANDOM_RESPONSE_AWAIT_TIME)
+    // imitation of typing process
+    const RANDOM_START_TYPING_TIMEOUT =
+      Math.floor(Math.random() * +VITE_MAX_RANDOM_RESPONSE_AWAIT_TIME) * 2
+    const RANDOM_RESPONSE_TIMEOUT =
+      Math.floor(Math.random() * +VITE_MAX_RANDOM_RESPONSE_AWAIT_TIME) + RANDOM_START_TYPING_TIMEOUT
+
+    setTimeout(() => {
+      typing.value = true
+    }, RANDOM_START_TYPING_TIMEOUT)
 
     setTimeout(() => {
       messages.push(
@@ -46,7 +51,7 @@ class ChatService {
         }),
       )
       typing.value = false
-    }, RANDOM_TIMEOUT)
+    }, RANDOM_RESPONSE_TIMEOUT)
   }
 
   getResponse(message: string, isFirstContact: boolean): string {
