@@ -8,7 +8,7 @@ Otherwise, it will  respond by modifying your message using one of the following
 - Reversing the letters within each word (while preserving the original word order).
 - Encoding the message using the SHA-512 algorithm.
 
-The conversation is limited by the VITE_MAX_MESSAGES_IN_POOL value defined in the .env file.
+The conversation is limited by the VITE_MAX_MESSAGES_IN_POOL value messages.
 
 ## Project Setup
 

@@ -24,7 +24,7 @@ const { VITE_MAX_MESSAGES_IN_POOL } = import.meta.env
         <li>Encoding the message using the SHA-512 algorithm.</li>
       </ul>
 
-      The conversation is limited by the {{ VITE_MAX_MESSAGES_IN_POOL }} value defined in the .env file.
+      The conversation is limited by the {{ VITE_MAX_MESSAGES_IN_POOL }} messages.
     </div>
   </div>
 </template>
