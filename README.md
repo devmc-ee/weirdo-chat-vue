@@ -1,12 +1,14 @@
 # Weirdo Chat
 
-It is a weirdo chat simulation. If you are polite and starting a conversation with greetings in English, Estonian or Russion, it should respond correspondingly. Otherwise it is going to respond with modified version of your message:
+It is a "weirdo" chat simulation. If a conversation is initiated with a polite greeting in English, Estonian, or Russian, the system will try to respond correspondingly.
 
-- full sentence revers
-- words letters revers (original sentence order)
-- encoding with SHA512
+Otherwise, it will  respond by modifying your message using one of the following methods:
 
-A conversation is limited with VITE_MAX_MESSAGES_IN_POOL .env variable
+- Reversing the entire sentence.
+- Reversing the letters within each word (while preserving the original word order).
+- Encoding the message using the SHA-512 algorithm.
+
+The conversation is limited by the VITE_MAX_MESSAGES_IN_POOL value defined in the .env file.
 
 ## Project Setup
 
