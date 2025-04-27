@@ -1,6 +1,6 @@
 # Weirdo Chat
 
-It is a "weirdo" chat simulation. If a conversation is initiated with a polite greeting in English, Estonian, or Russian, the system will try to respond correspondingly.
+It is a "weirdo" chat simulation. If a conversation is initiated with a polite (single) greeting in English, Estonian, or Russian, the system will try to respond correspondingly.
 
 Otherwise, it will  respond by modifying your message using one of the following methods:
 
